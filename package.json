@@ -1,0 +1,61 @@
+{
+  "name": "redux-broadcast-sync",
+  "version": "0.1.0",
+  "description": "Redux middleware to sync state across iframes and browser tabs via BroadcastChannel",
+  "keywords": [
+    "redux",
+    "broadcast",
+    "sync",
+    "iframe",
+    "middleware",
+    "state"
+  ],
+  "license": "MIT",
+  "author": "Denis Frederic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/billywild87/redux-broadcast-sync"
+  },
+  "bugs": {
+    "url": "https://github.com/billywild87/redux-broadcast-sync/issues"
+  },
+  "homepage": "https://github.com/billywild87/redux-broadcast-sync#readme",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@reduxjs/toolkit": ">=2.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@reduxjs/toolkit": "^2.11.2",
+    "eslint": "^10.0.3",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.57.0",
+    "vitest": "^4.1.0"
+  }
+}
